@@ -9,28 +9,31 @@ class Item {
 	}
 }
 
+class Chair {
+	
+	private static int numberOfChairs;
+
+	public Chair() {
+		numberOfChairs++;
+	}
+	
+	public void sitDown() {
+		System.out.println("OK, sitting down.");
+	}
+	
+	public static int count() {
+		return numberOfChairs;
+	}
+}
+
 public class Test {
 
 	public static void main(String[] args) {
-		HashTable ht = new HashTable();
-        
-		Item item = new Item("shoe", 10);
-		
-        ht.put(item, "Solna");
-		
-        String result = ht.get(item);
-        System.out.println(result);
-        
-        Item hat = new Item("hat", 30);
-        ht.put(hat, "Kista");
-        
-        String result2 = ht.get(item);
-        System.out.println(result2);
 
-        ht.put(item, "Solna2");
-
-        String result3 = ht.get(item);
-        System.out.println(result3);
+		Chair c = new Chair();
+		c.sitDown();
+		
+		System.out.println("Created " + Chair.count() + " chairs.");
 	}
 
 }
