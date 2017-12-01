@@ -13,13 +13,12 @@ public class Test {
 
 	public static void main(String[] args) {
 		HashTable ht = new HashTable();
-        
-		Item item = new Item("shoe", 10);
+		Item item = new Item("Shoe", 10);
 		
-        ht.put(item, "Solna");
+		ht.put(item, "Solna");
 		
-        String result = ht.get(item);
-        System.out.println(result);
+		String result = ht.get(item);
+		System.out.println(result);
         
         Item hat = new Item("hat", 30);
         ht.put(hat, "Kista");
